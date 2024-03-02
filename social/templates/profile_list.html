@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Profile List!</h1>
+
+<br>
+{% if profiles%}
+    {%for profile in profiles %}
+       Last Updated : {{profile.date_modified}}
+       Username : {{profile.user.username}}
+       Link : @{{profile.user.username | lower}}
+        <br>
+    {% endfor %}
+
+{%endif%}
+
+{%endblock%}
