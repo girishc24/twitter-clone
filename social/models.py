@@ -3,6 +3,16 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 # Create your models here.
 
+#create meep Model
+class Meep(models.Model):
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name="meeps")
+    body = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __self__(self):
+        return(f"{self.user}"
+               f"{self.created_at}")
+
 
 class Profile(models.Model):
     user =models.OneToOneField(User, on_delete=models.CASCADE)
