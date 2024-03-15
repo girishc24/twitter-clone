@@ -12,7 +12,7 @@
           <div class="col-md-4">
             <img src="{% static 'images/profile.webp' %}" class="img-fluid rounded-start" alt="...">
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8">     
             <div class="card-body">
               <h5 class="card-title">{{profile.user.username}}</h5>
               <p class="card-text"><a href="{%url 'profile' profile.user.id%}">@{{profile.user.username | lower}}</a></p>
