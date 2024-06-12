@@ -1,2 +1,2 @@
 ﻿# twitter-clone
-#Django Temaplate and Javasacript
+#Django Temaplate and Javasacript, Mysql
